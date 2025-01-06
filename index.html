@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/styles/styles.css">
+  <script src="assets/js/script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="main__layout">
+    <div class="main__top">
+      <div class="backCard">
+        <img src="assets/images/bg-card-back.png" alt="">
+        <span id="cvv">000</span>
+      </div>
+      <div class="frontCard">
+        <img src="assets/images/bg-card-front.png" alt="">
+        <img src="assets/images/card-logo.svg" id="logo-circ" alt="">
+        <span id="cardNumber">000 0000 0000 0000</span>
+        <span id="expDate">00/00</span>
+        <span id="cardName">Carlos Roberto</span>
+      </div>
+    </div>
+    <div class="main__bottom">
+      <form action="https://getform.io/f/avrrqzga" method="POST">
+
+        <div class="topDiv">
+          <label for="name">Cardholder Name</label>
+          <input name="name" type="text" placeholder="e.g Carlos Roberto" required>
+        </div>
+
+        <div class="topDiv">
+          <label for="cNumber">Card Number</label>
+          <input name="cNumber" type="text" placeholder="e.g 1234 5678 9123 0000" required maxlength="19"
+            pattern="\d{4} \d{4} \d{4} \d{4}">
+        </div>
+
+        <div class="form__bottom">
+          <div class="bottom__labels">
+            <label for="cardMonth">EXP.DATE (MM/YY)</label>
+            <label for="cardCvv">CVV</label>
+          </div>
+
+          <div class="bottom__inputs">
+            <input name="expMonth" id="cardMonth" type="number" placeholder="MM" required min="1" max="12">
+            <input name="expYear" id="cardYear" type="number" placeholder="YY" required min="25" max="99">
+            <input name="cvv" id="cardCvv" type="password" placeholder="e.g 123" required maxlength="3">
+          </div>
+        </div>
+
+        <button id="submit" type="submit">Confirm</button>
+
+      </form>
+    </div>
+
+  </main>
+
+</body>
+
+</html>

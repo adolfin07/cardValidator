@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.main__layout {
+    min-height: 100vh;
+
+    .main__top {
+        min-height: 35vh;
+        max-height: 35vh;
+        background-image: url(../images/bg-main-mobile.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        .backCard {
+            position: absolute;
+            top: 15%;
+            right: 5%;
+            width: 75%;
+
+            img {
+                width: 100%;
+
+            }
+
+            #cvv {
+                color: aliceblue;
+                position: absolute;
+                right: 10%;
+                bottom: 47%;
+                font-weight: 600;
+                font-size: 13px;
+            }
+        }
+
+        .frontCard {
+            width: 75%;
+            position: absolute;
+            bottom: -20%;
+            left: 3%;
+
+            img {
+                width: 100%;
+            }
+
+            #logo-circ {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                width: 70px;
+            }
+
+            #cardNumber {
+                position: absolute;
+                left: 20px;
+                bottom: 45px;
+                color: aliceblue;
+                letter-spacing: 2px;
+                font-weight: 600;
+                font-size: 20px;
+                width: 100%;
+            }
+
+            #expDate {
+                color: aliceblue;
+                position: absolute;
+                right: 15px;
+                font-size: 12px;
+                bottom: 20px;
+            }
+
+            #cardName {
+                position: absolute;
+                color: aliceblue;
+                font-size: 12px;
+                left: 15px;
+                bottom: 20px;
+            }
+        }
+    }
+
+    .main__bottom {
+       padding-top: 60px;
+        min-height: 65vh;
+        max-height: 65vh;
+        display: flex;
+        align-items: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .topDiv {
+
+                width: 90%;
+
+                label {
+                    color: #200A2F;
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-transform: uppercase;
+
+                }
+
+                input {
+                    width: 100%;
+                    padding: 13px 7px;
+                    border-radius: 5px;
+                    border: 1px solid rgba(0, 0, 0, 0.233);
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .form__bottom {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+
+                .bottom__labels {
+                    margin-bottom: 10px;
+                    color: #200A2F;
+                    font-weight: 600;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    display: flex;
+                    gap: 20px;
+                }
+
+                .bottom__inputs {
+
+
+                    #cardMonth,
+                    #cardYear {
+                        width: 20%;
+                        padding: 10px 7px;
+                        border-radius: 5px;
+                        border: 1px solid rgba(0, 0, 0, 0.233);
+                        font-size: 20px;
+                    }
+
+                    #cardCvv {
+                        width: 54.5%;
+                        margin-left: 10px;
+                        padding: 10px 7px;
+                        border-radius: 5px;
+                        font-size: 20px;
+                        border: 1px solid rgba(0, 0, 0, 0.233);
+                    }
+                }
+            }
+
+            #submit {
+                width: 90%;
+                background-color: #200A2F;
+                color: aliceblue;
+                border: none;
+                margin-top: 20px;
+                padding: 15px 0;
+                border-radius: 5px;
+                font-size: 20px;
+                transition: all 200ms ease-in;
+
+                &:hover{
+                    background-color: #3b1257;
+                }
+            }
+
+        }
+
+    }
+}
