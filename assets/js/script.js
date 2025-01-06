@@ -19,14 +19,53 @@ let cardDefaultName = "Carlos Roberto"
 let frontCard = document.querySelector("#frontCard");
 let backCard = document.querySelector("#backCard");
 
+
+
 cardName.addEventListener('keyup', function () {
     replaceName.innerText = cardName.value;
 
 });
+
+cardName.addEventListener('blur', function () {
+    if (replaceName.textContent.trim() === '') {
+        replaceName.textContent = cardDefaultName;
+    }
+});
+
 cardNumber.addEventListener('keyup', function () {
     replaceNumber.innerText = cardNumber.value;
 
+    let replaceLogo = document.querySelector(".replaceLogo");//imagen a cambiar
+    let value = cardNumber.value.replace(/\s/g, "");
+
+    if (cardNumber.value.startsWith('4')) {
+
+        console.log('visa card');
+        replaceLogo.src = "assets/images/visa.png";
+        frontCard.style.filter = "brightness(0)";
+
+
+    } else if (['51', '52', '53', '54', '55'].some(prefix => cardNumber.value.startsWith(prefix))) {
+
+        console.log('mastercard card');
+        replaceLogo.src = "assets/images/mastercard.png";
+        frontCard.style.filter = "brightness(1)";
+
+    } else if (cardNumber.textContent.trim() === '') {
+        replaceLogo.src = "assets/images/card-logo.svg";
+        frontCard.style.filter = "brightness(1)";
+    }else{
+        alert("Invalid Card");
+    }
+
+    let formattedValue = value.match(/.{1,4}/g)?.join(" ") || "";
+
+    cardNumber.value = formattedValue; 
+
+
+
 });
+
 cardCvv.addEventListener('keyup', function () {
     replaceCvv.innerText = cardCvv.value;
 
@@ -34,6 +73,7 @@ cardCvv.addEventListener('keyup', function () {
         cardCvv.value = cardCvv.value.slice(0, 3);
     }
 });
+
 cardMonth.addEventListener("keyup", () => {
     replaceMonth.innerHTML = cardMonth.value;
 
@@ -41,6 +81,7 @@ cardMonth.addEventListener("keyup", () => {
         cardMonth.value = cardMonth.value.slice(0, 2);
     }
 });
+
 cardYear.addEventListener("keyup", () => {
     replaceYear.innerHTML = cardYear.value;
 
@@ -49,12 +90,7 @@ cardYear.addEventListener("keyup", () => {
     }
 });
 
-cardName.addEventListener('blur', function () {
-    if (replaceName.textContent.trim() === '') {
-        replaceName.textContent = cardDefaultName;
-    }
-    console.log("has salido del input");
-});
+
 
 //face card slide
 
@@ -64,7 +100,6 @@ frontCard.addEventListener("click", () => {
 
 backCard.addEventListener("click", () => {
     console.log("backcard cliced");
-    backCard.classList.add("tofront");
 
 });
 

@@ -53,9 +53,11 @@ input[type="number"]::-webkit-inner-spin-button {
             bottom: -20%;
             left: 3%;
             transition: all 300ms ease;
+          
 
             img {
                 width: 100%;
+                transition: all 300ms ease;
             }
 
             #logo-circ {
@@ -159,7 +161,7 @@ input[type="number"]::-webkit-inner-spin-button {
                     }
 
                     #cardCvv {
-                        width: 54.5%;
+                        width: 54%;
                         margin-left: 10px;
                         padding: 10px 7px;
                         border-radius: 5px;
