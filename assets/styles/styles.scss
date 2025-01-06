@@ -6,6 +6,12 @@
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .main__layout {
     min-height: 100vh;
 
@@ -23,6 +29,8 @@
             top: 15%;
             right: 5%;
             width: 75%;
+
+            transition: all 300ms ease;
 
             img {
                 width: 100%;
@@ -44,6 +52,7 @@
             position: absolute;
             bottom: -20%;
             left: 3%;
+            transition: all 300ms ease;
 
             img {
                 width: 100%;
@@ -73,6 +82,7 @@
                 right: 15px;
                 font-size: 12px;
                 bottom: 20px;
+                display: flex;
             }
 
             #cardName {
@@ -86,7 +96,7 @@
     }
 
     .main__bottom {
-       padding-top: 60px;
+        padding-top: 60px;
         min-height: 65vh;
         max-height: 65vh;
         display: flex;
@@ -170,7 +180,7 @@
                 font-size: 20px;
                 transition: all 200ms ease-in;
 
-                &:hover{
+                &:hover {
                     background-color: #3b1257;
                 }
             }
@@ -178,4 +188,19 @@
         }
 
     }
+}
+
+.tofront {
+    width: 75%;
+    position: absolute;
+    margin-bottom: 100px;
+}
+
+.toback {
+    position: relative;
+    top: 15%;
+    right: 5%;
+    width: 75%;
+
+    transition: all 300ms ease;
 }

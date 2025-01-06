@@ -23,15 +23,17 @@
   <main class="main__layout">
     <div class="main__top">
       <div class="backCard">
-        <img src="assets/images/bg-card-back.png" alt="">
-        <span id="cvv">000</span>
+        <img id="backCard" src="assets/images/bg-card-back.png" alt="">
+        <span class="replaceCvv" id="cvv">000</span>
       </div>
-      <div class="frontCard">
-        <img src="assets/images/bg-card-front.png" alt="">
+      <div  class="frontCard">
+        <img src="assets/images/bg-card-front.png" id="frontCard" alt="">
         <img src="assets/images/card-logo.svg" id="logo-circ" alt="">
-        <span id="cardNumber">000 0000 0000 0000</span>
-        <span id="expDate">00/00</span>
-        <span id="cardName">Carlos Roberto</span>
+        <span class="replaceNumber" id="cardNumber">000 0000 0000 0000</span>
+        <span id="expDate">
+          <p class="replaceMonth">00</p>/<p class="replaceYear">00</p>
+        </span>
+        <span class="replaceName" id="cardName">Carlos Roberto</span>
       </div>
     </div>
     <div class="main__bottom">
@@ -39,13 +41,13 @@
 
         <div class="topDiv">
           <label for="name">Cardholder Name</label>
-          <input name="name" type="text" placeholder="e.g Carlos Roberto" required>
+          <input name="name" maxlength="18" id="holderName" type="text" placeholder="e.g Carlos Roberto" required>
         </div>
 
         <div class="topDiv">
           <label for="cNumber">Card Number</label>
-          <input name="cNumber" type="text" placeholder="e.g 1234 5678 9123 0000" required maxlength="19"
-            pattern="\d{4} \d{4} \d{4} \d{4}">
+          <input class="cardNumber" name="cNumber" type="text" placeholder="e.g 1234 5678 9123 0000" required
+            maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}">
         </div>
 
         <div class="form__bottom">
@@ -57,7 +59,7 @@
           <div class="bottom__inputs">
             <input name="expMonth" id="cardMonth" type="number" placeholder="MM" required min="1" max="12">
             <input name="expYear" id="cardYear" type="number" placeholder="YY" required min="25" max="99">
-            <input name="cvv" id="cardCvv" type="password" placeholder="e.g 123" required maxlength="3">
+            <input name="cvv" id="cardCvv" type="number" placeholder="e.g 123" required maxlength="3">
           </div>
         </div>
 
