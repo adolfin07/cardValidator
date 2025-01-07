@@ -53,7 +53,7 @@ input[type="number"]::-webkit-inner-spin-button {
             bottom: -20%;
             left: 3%;
             transition: all 300ms ease;
-          
+
 
             img {
                 width: 100%;
@@ -205,4 +205,189 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 75%;
 
     transition: all 300ms ease;
+}
+
+//responsive
+@media screen and (max-width:320px) {
+    .main__layout .main__top .frontCard #cardNumber {
+        position: absolute;
+        left: 20px;
+        bottom: 45px;
+        color: aliceblue;
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .main__layout .main__bottom form .form__bottom .bottom__inputs #cardCvv {
+        width: 53%;
+        margin-left: 10px;
+        padding: 10px 7px;
+        border-radius: 5px;
+        font-size: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.233);
+    }
+}
+@media screen and (min-width:768px) {
+    .main__layout {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main__layout .main__top {
+        min-height: 100vh;
+        max-height: 100vh;
+        min-width: 45vw;
+    }
+
+    .main__layout .main__bottom {
+        min-height: 100vh;
+        max-height: 100vh;
+        min-width: 55vw;
+        padding: 0 30px;
+    }
+
+    .main__layout .main__top .backCard {
+        position: absolute;
+        top: 20%;
+        right: -10%;
+        width: 95%;
+        transition: all 300ms ease;
+    }
+
+    .main__layout .main__top .frontCard {
+        width: 95%;
+        position: absolute;
+        bottom: 30%;
+        left: 3%;
+        transition: all 300ms ease;
+    }
+
+    .main__layout .main__top .frontCard #cardNumber {
+        position: absolute;
+        left: 25px;
+        bottom: 45px;
+        color: aliceblue;
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 22px;
+        width: 100%;
+    }
+}
+@media screen and (min-width:1024px) {
+    .main__layout {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main__layout .main__top {
+        min-height: 100vh;
+        max-height: 100vh;
+        min-width: 45vw;
+    }
+
+    .main__layout .main__bottom {
+        min-height: 100vh;
+        max-height: 100vh;
+        min-width: 55vw;
+        padding: 0 30px;
+    }
+
+    .main__layout .main__top .backCard {
+        position: absolute;
+        top: 20%;
+        right: -10%;
+        width: 75%;
+        transition: all 300ms ease;
+    }
+
+    .main__layout .main__top .frontCard {
+        width: 75%;
+        position: absolute;
+        bottom: 30%;
+        left: 10%;
+        transition: all 300ms ease;
+    }
+
+    .main__layout .main__top .frontCard #cardNumber {
+        position: absolute;
+        left: 35px;
+        bottom: 45px;
+        color: aliceblue;
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 22px;
+        width: 100%;
+    }
+}
+@media screen and (min-width:1440px) {
+    .main__layout {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main__layout .main__top {
+        min-height: 100vh;
+        max-height: 100vh;
+        min-width: 45vw;
+    }
+
+    .main__layout .main__bottom {
+        min-height: 100vh;
+        max-height: 100vh;
+        min-width: 55vw;
+        padding: 0 30px;
+    }
+
+    .main__layout .main__top .backCard {
+        position: absolute;
+        top: 20%;
+        right: -5%;
+        width: 65%;
+        transition: all 300ms ease;
+    }
+
+    .main__layout .main__top .frontCard {
+        width: 65%;
+        position: absolute;
+        bottom: 30%;
+        left: 10%;
+        transition: all 300ms ease;
+    }
+    .main__layout .main__bottom form .form__bottom .bottom__inputs #cardCvv {
+        width: 57%;
+        margin-left: 10px;
+        padding: 10px 7px;
+        border-radius: 5px;
+        font-size: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.233);
+    }
+
+    .main__layout .main__top .frontCard #cardNumber {
+        position: absolute;
+        left: 25px;
+        bottom: 50px;
+        color: aliceblue;
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 30px;
+        width: 100%;
+    }
+    .main__layout .main__top .frontCard #cardName {
+        position: absolute;
+        color: aliceblue;
+        font-size: 17px;
+        left: 15px;
+        bottom: 20px;
+    }
+    .main__layout .main__top .frontCard #expDate {
+        color: aliceblue;
+        position: absolute;
+        right: 15px;
+        font-size: 17px;
+        bottom: 20px;
+        display: flex
+    ;
+    }
 }
